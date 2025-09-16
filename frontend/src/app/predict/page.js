@@ -22,8 +22,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Toaster } from "@/components/ui/sonner";
-import { toast } from "sonner";
+import { Toaster, toast } from "sonner";
 
 export default function Predict() {
   const [formData, setFormData] = useState({
@@ -55,23 +54,17 @@ export default function Predict() {
         Age: parseInt(formData.Age),
       };
 
-      const response = await axios.post(
-        "http://localhost:8000/predict",
-        payload
-      );
+      const response = await axios.post("http://localhost:8000/predict", payload);
 
       setPrediction(response.data.prediction);
-      toast({
-        title: "Prediction Successful",
+
+      toast.success("Prediction Successful", {
         description: "Your salary has been predicted successfully.",
       });
     } catch (error) {
       console.error("Prediction error:", error);
-      toast({
-        title: "Prediction Failed",
-        description:
-          "There was an error predicting your salary. Please try again.",
-        variant: "destructive",
+      toast.error("Prediction Failed", {
+        description: "There was an error predicting your salary. Please try again.",
       });
     } finally {
       setIsLoading(false);
@@ -98,9 +91,7 @@ export default function Predict() {
             <div className="p-2 bg-primary rounded-lg">
               <Brain className="h-6 w-6 text-primary-foreground" />
             </div>
-            <span className="text-xl font-bold text-foreground">
-              SalarySense
-            </span>
+            <span className="text-xl font-bold text-foreground">SalarySense</span>
           </Link>
 
           <Button asChild variant="ghost">
@@ -158,15 +149,9 @@ export default function Predict() {
                           <SelectValue placeholder="Select education level" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="High School">
-                            High School
-                          </SelectItem>
-                          <SelectItem value="Bachelor">
-                            Bachelor's Degree
-                          </SelectItem>
-                          <SelectItem value="Master">
-                            Master's Degree
-                          </SelectItem>
+                          <SelectItem value="High School">High School</SelectItem>
+                          <SelectItem value="Bachelor">Bachelor's Degree</SelectItem>
+                          <SelectItem value="Master">Master's Degree</SelectItem>
                           <SelectItem value="PhD">PhD</SelectItem>
                         </SelectContent>
                       </Select>
@@ -240,9 +225,7 @@ export default function Predict() {
                         max="100"
                         placeholder="Enter your age"
                         value={formData.Age}
-                        onChange={(e) =>
-                          handleInputChange("Age", e.target.value)
-                        }
+                        onChange={(e) => handleInputChange("Age", e.target.value)}
                         required
                       />
                     </div>
