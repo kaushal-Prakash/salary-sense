@@ -1,5 +1,4 @@
 'use client';
-
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
@@ -29,7 +28,7 @@ const navigationMenuTriggerStyle = () =>
 export default function Navbar() {
   return (
     <motion.nav 
-      className="w-full bg-background border-b"
+      className="w-full bg-background border-b sticky top-0 z-50"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
