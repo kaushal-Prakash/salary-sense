@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">      
       {/* Hero Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 flex flex-col items-center text-center">
+      <section className="max-w-7xl min-h-screen mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -54,11 +54,6 @@ export default function Home() {
             <span className="text-primary"> Skills</span> Into Salary Insights
           </h1>
           
-          <p className="mt-6 text-xl text-muted-foreground max-w-2xl mx-auto">
-            SalarySense uses advanced machine learning to predict your earning potential 
-            based on your unique qualifications and career path.
-          </p>
-          
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="text-lg py-6 px-8">
               <Link href="/predict" className="flex items-center space-x-2">
@@ -76,7 +71,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-16 bg-muted/30">
+      <section id="features" className="py-24 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-16"
