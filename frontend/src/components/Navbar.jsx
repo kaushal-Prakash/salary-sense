@@ -28,7 +28,7 @@ const navigationMenuTriggerStyle = () =>
 export default function Navbar() {
   return (
     <motion.nav 
-      className="w-full bg-background border-b fixed top-0 z-50 bg-opacity-60 backdrop-blur-sm"
+      className="w-full bg-background border-b fixed top-0 z-50 bg-opacity-90 backdrop-blur-sm"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
