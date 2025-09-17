@@ -50,7 +50,7 @@ export default function Navbar() {
                 <NavigationMenuItem>
                   <NavigationMenuLink asChild>
                     <Link
-                      href="#features"
+                      href="/#features"
                       className={cn(navigationMenuTriggerStyle())}
                     >
                       Features
@@ -61,7 +61,7 @@ export default function Navbar() {
                 <NavigationMenuItem>
                   <NavigationMenuLink asChild>
                     <Link
-                      href="#how-it-works"
+                      href="/#how-it-works"
                       className={cn(navigationMenuTriggerStyle())}
                     >
                       How It Works
@@ -72,7 +72,7 @@ export default function Navbar() {
                 <NavigationMenuItem>
                   <NavigationMenuLink asChild>
                     <Link
-                      href="#about"
+                      href="/#about"
                       className={cn(navigationMenuTriggerStyle())}
                     >
                       About
