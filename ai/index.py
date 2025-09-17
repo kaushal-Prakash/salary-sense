@@ -6,7 +6,6 @@ app = FastAPI()
 #routes
 app.include_router(ai_router, prefix="/ai")
 
-# Root route
 @app.get("/")
 def read_root():
     return {"message": "AI Backend is running!"}
