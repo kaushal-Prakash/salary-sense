@@ -1,3 +1,4 @@
 joblib         
 uvicorn        
-fastapi         
+fastapi      
+scikit-learn   
