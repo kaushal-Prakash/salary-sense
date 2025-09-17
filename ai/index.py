@@ -1,10 +1,13 @@
 from fastapi import FastAPI
+from routes.ai_route import ai_router
 
-# Create FastAPI instance
 app = FastAPI()
+
+#routes
+app.include_router(ai_router, prefix="/ai")
 
 # Root route
 @app.get("/")
 def read_root():
-    return {"message": "Hello, FastAPI!"}
+    return {"message": "AI Backend is running!"}
 
