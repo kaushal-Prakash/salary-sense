@@ -54,7 +54,7 @@ export default function Predict() {
         Age: parseInt(formData.Age),
       };
 
-      const response = await axios.post("http://localhost:8000/predict", payload);
+      const response = await axios.post("http://127.0.0.1:8000/ai/predict", payload);
 
       setPrediction(response.data.prediction);
 
